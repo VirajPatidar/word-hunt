@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
+import Definitions from "./components/Definitions/Definitions";
 
 //MUI
 import { Container, Switch, withStyles } from "@material-ui/core";
@@ -59,6 +60,14 @@ function App() {
                     setMeanings={setMeanings}
                     LightTheme={LightTheme}
                 />
+                {meanings && (
+                    <Definitions
+                        meanings={meanings}
+                        word={word}
+                        LightTheme={LightTheme}
+                        category={category}
+                    />
+                )}
             </Container>
         </div>
     );
