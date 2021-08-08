@@ -5,6 +5,8 @@ import "./Header.css";
 import MenuItem from "@material-ui/core/MenuItem";
 import categories from "../data/category";
 import { debounce } from "lodash";
+import Gitlink from "../Gitlink";
+import { Typography } from "@material-ui/core";
 
 const Header = ({ category, setCategory, setWord, word, setMeanings, LightTheme, }) => {
 
@@ -21,6 +23,10 @@ const Header = ({ category, setCategory, setWord, word, setMeanings, LightTheme,
     return (
         <div className="header">
             <span className="title">{word ? word : "Word Hunt"}</span>
+            <br />
+            <Typography className="mt-3">Source Code can be found at:</Typography>
+            <Gitlink />
+            <br />
             <div className="inputs">
                 <ThemeProvider>
                     <TextField
