@@ -1,8 +1,7 @@
 import GitHubIcon from '@material-ui/icons/GitHub';
-import { makeStyles, ThemeProvider, useTheme } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
-import grey from '@material-ui/core/colors/grey';
 
 const useStyles = makeStyles((theme) => ({
     button: {

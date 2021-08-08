@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Definitions from "./components/Definitions/Definitions";
 import Header from "./components/Header/Header";
 import axios from "axios";
-import "./App.css";
 
 //MUI
 import { Container, Switch, withStyles } from "@material-ui/core";
