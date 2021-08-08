@@ -1,14 +1,23 @@
-import { TextField, ThemeProvider } from "@material-ui/core";
-import { createTheme } from "@material-ui/core/styles";
 import React from "react";
 import "./Header.css";
-import MenuItem from "@material-ui/core/MenuItem";
 import categories from "../data/category";
 import { debounce } from "lodash";
 import Gitlink from "../Gitlink";
+
+//MUI
+import { createTheme, TextField, ThemeProvider } from "@material-ui/core";
+import MenuItem from "@material-ui/core/MenuItem";
 import { Typography } from "@material-ui/core";
 
-const Header = ({ category, setCategory, setWord, word, setMeanings, LightTheme, }) => {
+const Header = ({ category, setCategory, setWord, word, setMeanings, LightTheme }) => {
+    const darkTheme = createTheme({
+        palette: {
+            primary: {
+                main: LightTheme ? "#000" : "#fff",
+            },
+            type: LightTheme ? "light" : "dark",
+        },
+    });
 
     const handleChange = (e) => {
         setCategory(e.target.value);
@@ -25,14 +34,14 @@ const Header = ({ category, setCategory, setWord, word, setMeanings, LightTheme,
             <span className="title">{word ? word : "Word Hunt"}</span>
             <br />
             <Typography className="mt-3">Source Code can be found at:</Typography>
-            <Gitlink />
+            <Gitlink theme={darkTheme}/>
             <br />
             <div className="inputs">
-                <ThemeProvider>
+                <ThemeProvider theme={darkTheme}>
                     <TextField
                         className="search"
                         id="filled-basic"
-                        // value={word}
+                        //value={word}
                         label="Search a Word"
                         onChange={(e) => handleText(e.target.value)}
                     />
