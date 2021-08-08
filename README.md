@@ -1,4 +1,31 @@
-# Getting Started with Create React App
+# Word Hunt: A web app that uses the Dictionary API to provide definitions in 13 languages
+
+_A responsive app that uses the Dictionary API to provide definitions in 13 languages_
+
+<br/>
+
+**Link to the Web App:** []()
+
+<br/>
+
+**Tech Stack**
+* React
+* Dictionary API
+* Material-UI
+* CSS
+
+<br/>
+
+**Features**
+* Responsive Design
+* Pronunciation audio (for English only)
+* Supports 13 languages
+* Material Design
+* Dark Mode feature
+
+<br/>
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
